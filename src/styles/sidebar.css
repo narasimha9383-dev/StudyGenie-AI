@@ -1,0 +1,201 @@
+/* ===========================
+   MENU BUTTON
+=========================== */
+
+.menu-btn{
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 2000;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #4f46e5;
+  color: #fff;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.20);
+
+  transition: .3s;
+}
+
+.menu-btn:hover{
+  transform: scale(1.08);
+  background: #4338ca;
+}
+
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: -300px;
+
+  width: 280px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  padding: 25px 20px 30px;
+
+  box-shadow: 6px 0 30px rgba(0,0,0,.15);
+
+  transition: left .35s ease;
+
+  z-index: 1500;
+
+  /* FIX FOR SCROLLING */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.show{
+  left: 0;
+}
+
+
+/* ===========================
+   TITLE
+=========================== */
+
+.sidebar h2{
+  position: sticky;
+  top: 0;
+
+  background: #fff;
+
+  padding: 10px 0 25px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  color: #4f46e5;
+
+  font-size: 24px;
+
+  z-index: 10;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* ===========================
+   MENU ITEMS
+=========================== */
+
+.side-item{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 14px 18px;
+
+  margin-bottom: 12px;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.side-item span{
+  font-size: 24px;
+}
+
+.side-item p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.side-item:hover{
+  background: #eef2ff;
+  transform: translateX(8px);
+}
+
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.logout{
+  margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 18px;
+}
+
+.logout:hover{
+  background: #fee2e2;
+}
+
+.logout p{
+  color: #dc2626;
+}
+
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.overlay{
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,.45);
+
+  z-index: 1000;
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.sidebar::-webkit-scrollbar{
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track{
+  background: #f1f5f9;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background: #4f46e5;
+  border-radius: 20px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+  background: #4338ca;
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+  .sidebar{
+    width: 260px;
+  }
+
+  .menu-btn{
+    top: 18px;
+    left: 18px;
+  }
+
+}

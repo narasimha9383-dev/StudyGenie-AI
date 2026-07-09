@@ -1,0 +1,12 @@
+function Tooltip({ label, children }) {
+  return (
+    <div className="group relative inline-flex">
+      {children}
+      <span className="pointer-events-none absolute -top-10 left-1/2 hidden -translate-x-1/2 rounded-full bg-slate-950 px-3 py-1 text-xs font-medium text-white shadow-lg group-hover:block">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+export default Tooltip;

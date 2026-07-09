@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg: #f8fcff;
+    --surface: #ffffff;
+    --surface-soft: #f3f9ff;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --border: rgba(14, 165, 233, 0.2);
+    --shadow: 0 24px 70px rgba(2, 132, 199, 0.12);
+    --shadow-soft: 0 14px 40px rgba(2, 132, 199, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family:
+      "Plus Jakarta Sans",
+      "Inter",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(14, 165, 233, 0.18),
+        transparent 32%
+      ),
+      linear-gradient(180deg, #f8fcff 0%, #f3f9ff 100%);
+    color: var(--text);
+  }
+
+  body::selection {
+    background: rgba(14, 165, 233, 0.22);
+    color: var(--text);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-[28px] border border-sky-100/80 bg-white/90 shadow-soft backdrop-blur-xl;
+  }
+
+  .card-surface {
+    @apply rounded-[28px] border border-sky-100/80 bg-white shadow-card;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-sky-500/30 focus-visible:ring-2 focus-visible:ring-sky-500/35;
+  }
+
+  .bg-violet-50 {
+    background-color: #f2f8ff !important;
+  }
+  .bg-violet-100 {
+    background-color: #e0f2fe !important;
+  }
+  .bg-violet-600 {
+    background-color: #0284c7 !important;
+  }
+  .bg-violet-700 {
+    background-color: #0369a1 !important;
+  }
+  .text-violet-600 {
+    color: #0284c7 !important;
+  }
+  .text-violet-700 {
+    color: #0369a1 !important;
+  }
+  .border-violet-200 {
+    border-color: #bae6fd !important;
+  }
+  .border-violet-500 {
+    border-color: #38bdf8 !important;
+  }
+  .from-violet-600 {
+    --tw-gradient-from: #0284c7 var(--tw-gradient-from-position);
+  }
+  .via-indigo-600 {
+    --tw-gradient-via: #2563eb var(--tw-gradient-via-position);
+  }
+  .to-slate-900 {
+    --tw-gradient-to: #0f172a var(--tw-gradient-to-position);
+  }
+  .hover\:bg-violet-50:hover {
+    background-color: #f2f8ff !important;
+  }
+  .hover\:bg-violet-100:hover {
+    background-color: #e0f2fe !important;
+  }
+  .hover\:text-violet-600:hover {
+    color: #0284c7 !important;
+  }
+  .ring-violet-500\/20 {
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2) !important;
+  }
+  .ring-violet-500\/30 {
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3) !important;
+  }
+  .focus-visible\:ring-violet-500\/35:focus-visible {
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.35) !important;
+  }
+  .bg-indigo-600 {
+    background-color: #2563eb !important;
+  }
+  .bg-indigo-700 {
+    background-color: #1d4ed8 !important;
+  }
+  .text-indigo-600 {
+    color: #2563eb !important;
+  }
+  .border-indigo-200 {
+    border-color: #bfdbfe !important;
+  }
+}

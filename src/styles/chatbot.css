@@ -1,0 +1,286 @@
+/* ===========================
+   AI TUTOR PAGE
+=========================== */
+
+.chatbot-page{
+    padding:40px 60px;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.chat-header{
+    margin-bottom:35px;
+}
+
+.chat-header h1{
+    font-size:38px;
+    color:#312e81;
+    margin-bottom:8px;
+}
+
+.chat-header p{
+    font-size:18px;
+    color:#64748b;
+}
+
+/* ===========================
+   CHAT CONTAINER
+=========================== */
+
+.chat-container{
+    background:#fff;
+    border-radius:30px;
+    padding:30px;
+    max-width:1100px;
+    margin:35px auto;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   CHAT MESSAGES
+=========================== */
+
+.chat-messages{
+    height:450px;
+    overflow-y:auto;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:25px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.chat-messages::-webkit-scrollbar{
+    width:8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+    background:#4f46e5;
+    border-radius:20px;
+}
+
+/* ===========================
+   AI MESSAGE
+=========================== */
+
+.ai-message{
+    max-width:70%;
+    padding:18px 22px;
+    background:#eef2ff;
+    color:#334155;
+    border-radius:20px 20px 20px 5px;
+    line-height:1.7;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    animation:fadeIn .3s ease;
+}
+
+/* ===========================
+   USER MESSAGE
+=========================== */
+
+.user-message{
+    max-width:70%;
+    margin-left:auto;
+    padding:18px 22px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+    color:#fff;
+    border-radius:20px 20px 5px 20px;
+    line-height:1.7;
+    box-shadow:0 5px 15px rgba(79,70,229,.3);
+    animation:fadeIn .3s ease;
+}
+
+/* ===========================
+   SUGGESTIONS
+=========================== */
+
+.suggestions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.suggestions button{
+    padding:12px 18px;
+    border:none;
+    border-radius:20px;
+    background:#eef2ff;
+    color:#4f46e5;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.suggestions button:hover{
+    background:#4f46e5;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   INPUT AREA
+=========================== */
+
+.chat-input{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.chat-input input{
+    flex:1;
+    padding:18px;
+    border:none;
+    border-radius:20px;
+    background:#f1f5f9;
+    font-size:16px;
+}
+
+.chat-input input:focus{
+    outline:2px solid #4f46e5;
+}
+
+.chat-input button{
+    padding:16px 30px;
+    border:none;
+    border-radius:20px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.chat-input button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(79,70,229,.3);
+}
+
+/* ===========================
+   TYPING INDICATOR
+=========================== */
+
+.typing{
+    display:flex;
+    gap:6px;
+    padding:12px 18px;
+}
+
+.typing span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#4f46e5;
+    animation:bounce 1s infinite;
+}
+
+.typing span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.typing span:nth-child(3){
+    animation-delay:.4s;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,80%,100%{
+        transform:scale(0.8);
+        opacity:.5;
+    }
+
+    40%{
+        transform:scale(1.2);
+        opacity:1;
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .chatbot-page{
+        padding:20px;
+    }
+
+    .chat-header h1{
+        font-size:30px;
+    }
+
+    .chat-header p{
+        font-size:16px;
+    }
+
+    .chat-container{
+        padding:20px;
+    }
+
+    .chat-messages{
+        height:350px;
+    }
+
+    .ai-message,
+    .user-message{
+        max-width:90%;
+    }
+
+    .chat-input{
+        flex-direction:column;
+    }
+
+    .chat-input button{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .chat-header h1{
+        font-size:26px;
+    }
+
+    .chat-container{
+        padding:15px;
+    }
+
+    .chat-messages{
+        height:300px;
+    }
+
+    .suggestions{
+        flex-direction:column;
+    }
+
+    .suggestions button{
+        width:100%;
+    }
+
+}

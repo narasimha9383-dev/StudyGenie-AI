@@ -1,0 +1,231 @@
+/* ===========================
+   PLANNER PAGE
+=========================== */
+
+.planner-page{
+    padding:40px 60px;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.planner-header{
+    margin-bottom:35px;
+}
+
+.planner-header h1{
+    font-size:38px;
+    color:#312e81;
+    margin-bottom:8px;
+}
+
+.planner-header p{
+    font-size:18px;
+    color:#64748b;
+}
+
+/* ===========================
+   TOP SECTION
+=========================== */
+
+.planner-top{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:35px;
+}
+
+.calendar-card,
+.goal-card{
+    background:#fff;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.calendar-card:hover,
+.goal-card:hover{
+    transform:translateY(-8px);
+}
+
+/* ===========================
+   CALENDAR
+=========================== */
+
+.calendar{
+    margin-top:25px;
+    background:#eef2ff;
+    border-radius:20px;
+    padding:30px;
+    line-height:2.8;
+    color:#4f46e5;
+    font-weight:700;
+    text-align:center;
+}
+
+/* ===========================
+   GOAL CARD
+=========================== */
+
+.goal-card{
+    text-align:center;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+    color:#fff;
+}
+
+.goal-card h1{
+    font-size:60px;
+    margin:20px 0;
+}
+
+.goal-card p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* ===========================
+   TASK SECTION
+=========================== */
+
+.task-section{
+    margin-top:35px;
+    background:#fff;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.task-section h2{
+    color:#312e81;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   TASK GRID
+=========================== */
+
+.task-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.task-card{
+    background:#f8fafc;
+    padding:25px;
+    border-radius:25px;
+    transition:.3s;
+    border-left:5px solid #4f46e5;
+}
+
+.task-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.task-card h3{
+    color:#1e293b;
+    margin-bottom:12px;
+}
+
+.task-card p{
+    color:#64748b;
+    line-height:1.7;
+}
+
+.task-card span{
+    display:inline-block;
+    margin-top:18px;
+    padding:8px 18px;
+    border-radius:20px;
+    background:#dcfce7;
+    color:#16a34a;
+    font-weight:700;
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.progress-bar{
+    width:100%;
+    height:14px;
+    margin-top:18px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:70%;
+    height:100%;
+    background:linear-gradient(90deg,#4f46e5,#9333ea);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .planner-top{
+        grid-template-columns:1fr;
+    }
+
+    .task-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .planner-page{
+        padding:20px;
+    }
+
+    .planner-header h1{
+        font-size:30px;
+    }
+
+    .planner-header p{
+        font-size:16px;
+    }
+
+    .task-grid{
+        grid-template-columns:1fr;
+    }
+
+    .calendar-card,
+    .goal-card,
+    .task-section{
+        padding:25px;
+    }
+
+    .goal-card h1{
+        font-size:45px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .planner-header h1{
+        font-size:26px;
+    }
+
+    .calendar-card,
+    .goal-card,
+    .task-section{
+        padding:20px;
+    }
+
+    .goal-card h1{
+        font-size:38px;
+    }
+
+}
