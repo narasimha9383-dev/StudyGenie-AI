@@ -1,0 +1,10 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { Bell, Menu, Search, Sparkles, UserCircle } from "lucide-react";
+import { AuthContext } from "../../context/AuthContext";
+
+export default function Navbar() {
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+  return <header className="sticky top-0 z-30 border-b border-white/10 bg-[#0b0b0d]/80 backdrop-blur-xl"><div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-4 sm:px-6 lg:px-8"><div className="hidden h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[.03] text-zinc-300 lg:flex"><Menu size={19}/></div><label className="flex max-w-xl flex-1 items-center gap-3 rounded-xl border border-white/10 bg-white/[.035] px-4 py-2.5 text-zinc-400 transition focus-within:border-[#39ff14]/50"><Search size={17}/><input className="w-full border-0 bg-transparent p-0 text-sm text-white outline-none placeholder:text-zinc-500" placeholder="Search notes, PDFs, and study resources"/></label><div className="ml-auto flex items-center gap-2"><button onClick={()=>navigate("/notifications")} className="neon-focus relative grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.035] text-zinc-300" aria-label="Notifications"><Bell size={18}/><span className="absolute right-1 top-1 h-2 w-2 rounded-full bg-[#39ff14]"/></button><button onClick={()=>navigate("/upload")} className="hidden items-center gap-2 rounded-xl bg-[#39ff14] px-3 py-2 text-xs font-bold text-[#071006] sm:flex"><Sparkles size={15}/>Quick add</button><button onClick={()=>navigate("/profile")} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[.035] px-2.5 py-2 text-left"><UserCircle className="text-[#65ff45]" size={22}/><span className="hidden sm:block"><b className="block text-sm leading-none text-white">{user?.name || "Profile"}</b><small className="text-[10px] text-[#65ff45]">Study workspace</small></span></button></div></div></header>;
+}

@@ -1,0 +1,161 @@
+.notifications-page {
+  padding: 40px 60px;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.notification-header {
+  margin-bottom: 35px;
+}
+
+.notification-header h1 {
+  font-size: 38px;
+  color: #312e81;
+  margin-bottom: 8px;
+}
+
+.notification-header p {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.notification-container {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notification-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.notification-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.notification-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h2 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 22px;
+}
+
+.notification-content p {
+  margin: 0 0 10px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.notification-content span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.notification-card button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notification-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* ===========================
+   UNREAD
+=========================== */
+
+.notification-card.unread {
+  border-left: 5px solid #4f46e5;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 20px;
+  }
+
+  .notification-header h1 {
+    font-size: 30px;
+  }
+
+  .notification-header p {
+    font-size: 16px;
+  }
+
+  .notification-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .notification-content {
+    text-align: center;
+  }
+
+  .notification-card button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-header h1 {
+    font-size: 26px;
+  }
+
+  .notification-card {
+    padding: 20px;
+  }
+
+  .notification-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .notification-content h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,2 @@
+import { Bell } from "lucide-react";
+export default function Notifications(){return <section className="mx-auto max-w-3xl"><div className="rounded-3xl bg-white p-8 text-center shadow-sm"><Bell className="mx-auto text-sky-600" size={40}/><h1 className="mt-4 text-3xl font-bold">Notifications</h1><p className="mt-3 text-slate-600">You have no notifications. Notifications are not generated until a persistent notification service is configured.</p></div></section>;}

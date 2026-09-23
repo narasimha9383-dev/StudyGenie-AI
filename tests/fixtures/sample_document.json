@@ -1,0 +1,33 @@
+{
+  "title": "Generative AI",
+  "notes": {
+    "summary": "Generative AI learns patterns from existing data and produces new content that follows those patterns.",
+    "key_concepts": [
+      "Generative AI creates new content from learned data patterns.",
+      "GANs use a Generator and a Discriminator.",
+      "Diffusion models generate content through iterative denoising.",
+      "Transformers use attention to model relationships between tokens."
+    ],
+    "important_points": [
+      "The Generator creates candidate samples.",
+      "The Discriminator evaluates whether a sample is real or generated.",
+      "Model quality depends on training data and evaluation."
+    ],
+    "revision_tips": [
+      "Remember the Generator creates and the Discriminator evaluates.",
+      "Compare the training and generation process of major model families."
+    ]
+  },
+  "questions_answers": [
+    {
+      "question": "what is Gan in this PDF",
+      "answer": "A Generative Adversarial Network (GAN) is a model made of a Generator and a Discriminator that learn through competition.",
+      "source_pages": [1]
+    },
+    {
+      "question": "How do diffusion models work?",
+      "answer": "Diffusion models learn to reverse a noise-adding process and generate data through iterative denoising.",
+      "source_pages": [2]
+    }
+  ]
+}

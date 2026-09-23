@@ -1,0 +1,239 @@
+/* ===========================
+   LEADERBOARD PAGE
+=========================== */
+
+.leaderboard-page{
+    padding:40px 60px;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.leader-header{
+    margin-bottom:35px;
+}
+
+.leader-header h1{
+    font-size:38px;
+    color:#312e81;
+    margin-bottom:8px;
+}
+
+.leader-header p{
+    font-size:18px;
+    color:#64748b;
+}
+
+/* ===========================
+   YOUR RANK CARD
+=========================== */
+
+.rank-card{
+    margin-top:35px;
+    padding:40px;
+    border-radius:30px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+    box-shadow:0 15px 35px rgba(79,70,229,.30);
+    transition:.3s;
+}
+
+.rank-card:hover{
+    transform:translateY(-6px);
+}
+
+.rank-card h2{
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.rank-number{
+    font-size:70px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.rank-card p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* ===========================
+   LEADER LIST
+=========================== */
+
+.leader-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-top:40px;
+}
+
+/* ===========================
+   LEADER ITEM
+=========================== */
+
+.leader-item{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:22px 30px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.leader-item:hover{
+    transform:translateX(8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* Rank */
+
+.rank{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#eef2ff;
+    color:#4f46e5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:800;
+}
+
+/* User */
+
+.user-info{
+    flex:1;
+}
+
+.user-info h3{
+    margin:0 0 6px;
+    color:#1e293b;
+    font-size:22px;
+}
+
+.user-info p{
+    color:#64748b;
+    font-size:15px;
+}
+
+/* Score */
+
+.score{
+    font-size:24px;
+    font-weight:700;
+    color:#4f46e5;
+}
+
+/* Button */
+
+.leader-item button{
+    padding:12px 25px;
+    border:none;
+    border-radius:18px;
+    background:#eef2ff;
+    color:#4f46e5;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.leader-item button:hover{
+    background:#4f46e5;
+    color:#fff;
+}
+
+/* ===========================
+   TOP 3 COLORS
+=========================== */
+
+.leader-item:nth-child(1) .rank{
+    background:#fef3c7;
+    color:#d97706;
+}
+
+.leader-item:nth-child(2) .rank{
+    background:#e5e7eb;
+    color:#475569;
+}
+
+.leader-item:nth-child(3) .rank{
+    background:#fde68a;
+    color:#92400e;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .leader-item{
+        flex-wrap:wrap;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .leaderboard-page{
+        padding:20px;
+    }
+
+    .leader-header h1{
+        font-size:30px;
+    }
+
+    .leader-header p{
+        font-size:16px;
+    }
+
+    .rank-card{
+        padding:25px;
+    }
+
+    .rank-number{
+        font-size:50px;
+    }
+
+    .leader-item{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .user-info{
+        text-align:center;
+    }
+
+    .leader-item button{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .leader-header h1{
+        font-size:26px;
+    }
+
+    .rank{
+        width:55px;
+        height:55px;
+        font-size:22px;
+    }
+
+    .score{
+        font-size:20px;
+    }
+
+}

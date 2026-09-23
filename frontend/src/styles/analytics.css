@@ -1,0 +1,247 @@
+/* ===========================
+   ANALYTICS PAGE
+=========================== */
+
+.analytics-page{
+    padding:40px 60px;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.analytics-header{
+    margin-bottom:35px;
+}
+
+.analytics-header h1{
+    font-size:38px;
+    color:#312e81;
+    margin-bottom:8px;
+}
+
+.analytics-header p{
+    font-size:18px;
+    color:#64748b;
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+.analytics-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.analytics-card{
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.analytics-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.analytics-card span{
+    font-size:40px;
+}
+
+.analytics-card h2{
+    margin:15px 0;
+    font-size:34px;
+    color:#4f46e5;
+}
+
+.analytics-card p{
+    color:#64748b;
+    font-weight:600;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.analytics-content{
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:30px;
+    margin-top:35px;
+}
+
+/* ===========================
+   CHART CARD
+=========================== */
+
+.chart-card,
+.performance-card{
+    background:#fff;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.chart-card h2,
+.performance-card h2{
+    color:#312e81;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   BAR CHART
+=========================== */
+
+.bars{
+    height:280px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-around;
+    gap:20px;
+}
+
+.bars div{
+    width:55px;
+    background:linear-gradient(180deg,#4f46e5,#9333ea);
+    border-radius:15px 15px 0 0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    color:#fff;
+    font-weight:700;
+    padding-bottom:12px;
+    transition:.3s;
+}
+
+.bars div:hover{
+    transform:scaleY(1.05);
+}
+
+/* ===========================
+   PERFORMANCE CARD
+=========================== */
+
+.performance-card span{
+    display:block;
+    margin:18px 0;
+    color:#64748b;
+    line-height:1.7;
+}
+
+.performance-card button{
+    margin-top:20px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.performance-card button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(79,70,229,.30);
+}
+
+/* ===========================
+   PROGRESS
+=========================== */
+
+.progress-bar{
+    width:100%;
+    height:14px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-fill{
+    height:100%;
+    width:75%;
+    background:linear-gradient(90deg,#4f46e5,#9333ea);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .analytics-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .analytics-content{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .analytics-page{
+        padding:20px;
+    }
+
+    .analytics-header h1{
+        font-size:30px;
+    }
+
+    .analytics-header p{
+        font-size:16px;
+    }
+
+    .analytics-stats{
+        grid-template-columns:1fr;
+    }
+
+    .chart-card,
+    .performance-card{
+        padding:25px;
+    }
+
+    .bars{
+        gap:12px;
+        height:220px;
+    }
+
+    .bars div{
+        width:40px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .analytics-header h1{
+        font-size:26px;
+    }
+
+    .chart-card,
+    .performance-card{
+        padding:20px;
+    }
+
+    .bars{
+        height:180px;
+    }
+
+    .bars div{
+        width:32px;
+        font-size:12px;
+    }
+
+}

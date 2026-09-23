@@ -1,0 +1,8 @@
+python-dotenv
+tenacity
+google-genai
+pymupdf
+langdetect
+chromadb==1.5.9
+numpy
+sentence-transformers

@@ -1,0 +1,9 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Say hello and confirm that DeepSeek V4 is working through AgentRouter."
+    }
+  ]
+}
